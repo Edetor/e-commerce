@@ -11,3 +11,127 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.content {
+  /*To footer is at the bottom*/
+  min-height: calc(100vh - 56px - 70px);
+  padding: 1.5rem 0;
+}
+
+.goods {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+a.brand-logo {
+  padding-left: 15px;
+}
+
+/*Это чтобы карточки были все одного размера и в одном стиле, не в зависимости от кол-ва описания*/
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-content {
+  flex-grow: 1;
+}
+
+.cart {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+
+  cursor: pointer;
+  z-index: 5;
+  padding: 1rem;
+
+  border-radius: 20px;
+}
+
+@media (min-width: 767px){
+  .cart {
+    top: 5rem;
+    bottom: unset;
+  }
+}
+
+span.cart-quantity {
+  color: black;
+  font-size: 0.8rem;
+}
+
+.basket-list {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  backgroud-color: #fff;
+  width: 50rem;
+  max-width: 95%;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+  animation: show 500ms ease-in-out;
+}
+
+.basket-close {
+  cursor: pointer;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  color: white;
+}
+
+basket-delete {
+  cursor: pointer;
+
+}
+
+@keyframes show {
+  from {
+      top: 70%;
+    opacity: 0;
+  }
+  to {
+    top: 50%;
+    opacity: 1;
+  }
+
+}
+
+.btn-add {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#toast-container {
+  top: 2rem !important;
+  animation: fade-in 250ms ease-in-out;
+  right: 8rem;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(2rem);
+  } to {
+         opacity: 1;
+         transform: translateY(0rem);
+      }
+
+}
+
+.imageBack {
+  background-image: url(../public/backgroundtesting.jpg);
+  /*background-repeat: no-repeat;*/
+  -moz-background-size: 100%; /* Firefox 3.6+ */
+  -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+  -o-background-size: 100%; /* Opera 9.6+ */
+  background-size: 100%; /* Современные браузеры */
+}
+
+.opacity {
+  background: rgba(199,171,171, 0.5);
+}
