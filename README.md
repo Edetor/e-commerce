@@ -1,4 +1,4 @@
-# E-commerce simple practice
+# E-commerce simple, practice
 
 Simple project to practice and improve knowledge of functional React-components.
 Using api, materializecss, react hooks.
