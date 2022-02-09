@@ -27,7 +27,7 @@ function Footer () {
         <div className="footer-copyright">
             <div className="container">
                 © 2022 Copyright Text
-                <a className="grey-text text-lighten-4 right" href="#!">Repo</a>
+                <a href="https://github.com/Edetor/e-commerce" target='_blank' rel='noreferrer'>Repo</a>
             </div>
         </div>
     </footer>
